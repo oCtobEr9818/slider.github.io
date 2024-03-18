@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @layer components {
-  .clip-path-affirm::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    clip-path: circle(31.8% at 24% 100%);
-  }
-} */
