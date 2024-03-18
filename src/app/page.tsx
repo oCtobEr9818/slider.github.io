@@ -1,9 +1,9 @@
-import { Content } from "@/app/_components/content1";
+import { SwiperContent } from "@/app/_components/slider";
 
 const Page = () => (
-  <div className="flex gap-4">
-    <Content />
-  </div>
+  <>
+    <SwiperContent />
+  </>
 );
 
 export default Page;

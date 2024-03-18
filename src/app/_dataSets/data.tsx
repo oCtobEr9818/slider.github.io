@@ -14,8 +14,8 @@ export const computersDatas = [
     originPrice: "2,399",
     specialPrice: "1,999",
     affirmPrice: "97/mo",
-    FreeShipping: "Delivery By Friday, Mar 15",
-    buttonTexts: "BUT Now",
+    freeShipping: "Delivery By Friday, Mar 15",
+    buttonTexts: "Buy Now",
   },
   {
     imageURL: "/image/gaming-pc-01-FractalRR001-main-400.avif",
@@ -32,7 +32,7 @@ export const computersDatas = [
     originPrice: "1,999",
     specialPrice: "1,699",
     affirmPrice: "82/mo",
-    FreeShipping: "Delivery By Friday, Mar 15",
+    freeShipping: "Delivery By Friday, Mar 15",
     buttonTexts: "Buy Now",
   },
   {
@@ -51,7 +51,7 @@ export const computersDatas = [
     originPrice: "1,319",
     specialPrice: "1,169",
     affirmPrice: "73/mo",
-    FreeShipping: "Estimate Ship By 03/19/2024",
+    freeShipping: "Estimate Ship By 03/19/2024",
     buttonTexts: "Customize",
   },
   {
@@ -70,7 +70,7 @@ export const computersDatas = [
     originPrice: "1,199",
     specialPrice: "1,099",
     affirmPrice: "99/mo",
-    FreeShipping: "Estimate Ship By 03/19/2024",
+    freeShipping: "Estimate Ship By 03/19/2024",
     buttonTexts: "Buy Now",
   },
   {
@@ -89,7 +89,7 @@ export const computersDatas = [
     originPrice: "2,199",
     specialPrice: "1,899",
     affirmPrice: "92/mo",
-    FreeShipping: "Delivery By Friday, Mar 15",
+    freeShipping: "Delivery By Friday, Mar 15",
     buttonTexts: "Buy Now",
   },
   {
@@ -108,7 +108,7 @@ export const computersDatas = [
     originPrice: "1,499",
     specialPrice: "1,449",
     affirmPrice: "90/mo",
-    FreeShipping: "Estimate Ship By 03/19/2024",
+    freeShipping: "Estimate Ship By 03/19/2024",
     buttonTexts: "Buy Now",
   },
 ];

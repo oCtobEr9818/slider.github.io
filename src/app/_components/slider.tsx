@@ -1,13 +1,43 @@
+"use client";
+
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import { computersDatas } from "@/app/_dataSets/data";
 
-export const Content = () => {
+interface ComputerData {
+  computerType: string | null;
+  imageURL: string;
+  productName: string;
+  description: string;
+  discount: string;
+  specialPrice: string;
+  originPrice: string;
+  affirmPrice: string;
+  freeShipping: string;
+  buttonTexts: string;
+}
+
+export const SwiperContent: React.FC = () => {
   return (
-    <div className="flex overflow-x-auto max-w-[75%] mx-auto">
-      {computersDatas.map((data, index) => (
-        <div
-          className="swiper-slide w-[350px]  p-0 bg-white border"
+    <Swiper
+      slidesPerView={1}
+      spaceBetween={30}
+      breakpoints={{
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }}
+      className="relative flex w-[75%] min-h-[680px]"
+    >
+      {computersDatas.map((data: ComputerData, index: number) => (
+        <SwiperSlide
+          className="flex flex-col space-y-2 w-[350px] p-2 bg-white border select-none"
           key={index}
         >
           <div className="p-5 relative flex flex-col gap-2">
@@ -25,10 +55,11 @@ export const Content = () => {
                 width={200}
                 height={200}
                 priority={false}
+                className="h-[150px]"
               />
             </div>
-            <div className="w-full flex flex-col gap-2">
-              <h2 className="font-bold text-slate-700 hover:text-red-500 cursor-pointer">
+            <div className=" h-[280px] flex flex-col">
+              <h2 className="font-bold h-[60px] text-slate-700 hover:text-red-500 cursor-pointer">
                 {data.productName}
               </h2>
 
@@ -41,7 +72,7 @@ export const Content = () => {
           </div>
 
           <div className="flex flex-col justify-between rounded-b-[10px] bg-slate-150 p-5">
-            <div className="flex gap-1 bg-red-600 text-[#f7f7f7] text-[12px] rounded-full p-2 w-fit">
+            <div className="flex gap-1 bg-[#f00] text-[#f7f7f7] text-[12px] rounded-full p-2 w-fit">
               <span>SAVE</span>
               <span>${data.discount}</span>
             </div>
@@ -63,18 +94,20 @@ export const Content = () => {
             </button>
           </div>
 
-          <div className="flex justify-between items-center gap-2 bg-slate-150 px-5 py-2">
+          <div className="flex justify-between items-center bg-slate-150 px-5 py-2">
             <div className="flex flex-col items-start">
               <span className="text-xs font-bold">Free Shipping</span>
-              <span className="text-xs">{data.FreeShipping}</span>
+              <span className="text-xs">{data.freeShipping}</span>
             </div>
 
-            <div className="buy-btn flex justify-center border border-[#f00]  rounded-full w-24 h-fit py-1 bg-transparent">
-              <button className=" text-[#f00]">{data.buttonTexts}</button>
+            <div className="buy-btn flex justify-center border border-[#f00] hover:bg-[#f00]  rounded-full w-24 h-fit py-1 bg-transparent transition-all duration-[400ms]">
+              <button className="text-[#f00] hover:text-white transition-all duration-[400ms]">
+                {data.buttonTexts}
+              </button>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
   );
 };
