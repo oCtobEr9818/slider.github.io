@@ -55,7 +55,7 @@ export const SwiperContent: React.FC = () => {
                 width={200}
                 height={200}
                 priority={false}
-                className="h-[150px]"
+                className="h-[150px] object-contain"
               />
             </div>
             <div className=" h-[280px] flex flex-col">
